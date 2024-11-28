@@ -1,4 +1,4 @@
-package com.rupak.analyticsdemo.ui.theme
+package com.rupak.analyticsdemo.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

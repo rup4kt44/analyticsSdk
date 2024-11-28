@@ -1,4 +1,4 @@
-package com.rupak.analyticsdemo.ui.theme
+package com.rupak.analyticsdemo.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -65,4 +65,7 @@ dependencies {
 
     //Gson
     implementation(libs.gson)
+
+    //importing library
+    implementation(project(":analyticsSDK"))
 }

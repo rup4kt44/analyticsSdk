@@ -1,4 +1,4 @@
-package com.rupak.androidsdk
+package com.rupak.analyticssdk
 
 import org.junit.Test
 

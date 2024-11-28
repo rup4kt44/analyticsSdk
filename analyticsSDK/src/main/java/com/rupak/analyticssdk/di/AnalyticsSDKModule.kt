@@ -1,13 +1,13 @@
-package com.rupak.androidsdk.di
+package com.rupak.analyticssdk.di
 
 
 import android.app.Application
 import androidx.room.Room
-import com.rupak.androidsdk.data.local.AnalyticsDatabase
-import com.rupak.androidsdk.data.local.EventDao
-import com.rupak.androidsdk.data.local.SessionDao
-import com.rupak.androidsdk.data.repository.AnalyticsRepository
-import com.rupak.androidsdk.data.repository.AnalyticsRepositoryImpl
+import com.rupak.analyticssdk.data.local.AnalyticsDatabase
+import com.rupak.analyticssdk.data.local.EventDao
+import com.rupak.analyticssdk.data.local.SessionDao
+import com.rupak.analyticssdk.data.repository.AnalyticsRepository
+import com.rupak.analyticssdk.data.repository.AnalyticsRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

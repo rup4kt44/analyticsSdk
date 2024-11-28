@@ -1,10 +1,11 @@
-package com.rupak.androidsdk.data.local
+package com.rupak.analyticssdk.data.local
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.rupak.androidsdk.domain.model.Session
+import com.rupak.analyticssdk.domain.model.Session
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SessionDao {
@@ -14,6 +15,9 @@ interface SessionDao {
     @Update
     suspend fun updateSession(session: Session)
 
+    @Query("UPDATE sessions SET isActive = 0  WHERE sessionId =:sessionId")
+    suspend fun stopSession(sessionId: String): Int
+
     @Query("SELECT * FROM sessions WHERE isActive = 1 LIMIT 1")
-    suspend fun getActiveSession(): Session?
+    fun getActiveSession(): Flow<Session>
 }
