@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.plugin)
+    alias(libs.plugins.ksp)
     id("kotlin-kapt")
 }
 
@@ -49,4 +50,5 @@ dependencies {
 
     //Gson
     implementation(libs.gson)
+
 }

@@ -14,6 +14,8 @@ material = "1.12.0"
 hilt_version = "2.52"
 #Gson
 gson_version= "2.11.0"
+#ksp
+ksp = "2.1.0-1.0.29"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,4 +48,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 hilt_plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt_version" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
