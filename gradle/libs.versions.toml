@@ -12,6 +12,8 @@ appcompat = "1.7.0"
 material = "1.12.0"
 #hilt
 hilt_version = "2.52"
+#Gson
+gson_version= "2.11.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +36,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 #hilt
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt_version" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt_version" }
+
+#Gson
+gson = {module = "com.google.code.gson:gson" , version.ref = "gson_version"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
