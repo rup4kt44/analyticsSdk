@@ -16,6 +16,7 @@ hilt_version = "2.52"
 gson_version= "2.11.0"
 #ksp
 ksp = "2.1.0-1.0.29"
+room_version = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +42,11 @@ hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", ve
 
 #Gson
 gson = {module = "com.google.code.gson:gson" , version.ref = "gson_version"}
+
+#room
+room  = {group = "androidx.room" , name = "room-runtime" , version.ref = "room_version"}
+room-compiler = { group = "androidx.room", name = "room-compiler",version.ref = "room_version" }
+room-ktx = { group = "androidx.room", name = "room-ktx",version.ref = "room_version" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
