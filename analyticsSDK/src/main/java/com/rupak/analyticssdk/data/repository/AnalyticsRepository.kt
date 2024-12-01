@@ -1,6 +1,5 @@
 package com.rupak.analyticssdk.data.repository
 
-import android.util.Log
 import com.google.gson.Gson
 import com.rupak.analyticssdk.data.local.EventDao
 import com.rupak.analyticssdk.data.local.SessionDao
@@ -8,14 +7,13 @@ import com.rupak.analyticssdk.domain.model.Event
 import com.rupak.analyticssdk.domain.model.Session
 import jakarta.inject.Inject
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collectLatest
 import java.util.UUID
 
 interface AnalyticsRepository {
 
-    suspend fun startSession(): String
+    suspend fun startSession(sessionId: String? = null): String
 
-    suspend fun stopSession(sessionId: String):Int
+    suspend fun stopSession(sessionId: String): Int
 
     suspend fun logEvent(sessionId: String, name: String, properties: Map<String, Any>)
 
@@ -28,9 +26,9 @@ interface AnalyticsRepository {
 class AnalyticsRepositoryImpl @Inject constructor(
     private val sessionDao: SessionDao, private val eventsDao: EventDao
 ) : AnalyticsRepository {
-    override suspend fun startSession(): String {
+    override suspend fun startSession(sessionId: String?): String {
         val session = Session(
-            sessionId = UUID.randomUUID().toString(),
+            sessionId = sessionId ?: UUID.randomUUID().toString(),
             startTime = System.currentTimeMillis(),
             endTime = null,
             isActive = true
@@ -39,8 +37,8 @@ class AnalyticsRepositoryImpl @Inject constructor(
         return session.sessionId
     }
 
-    override suspend fun stopSession(sessionId: String) :Int{
-       return sessionDao.stopSession(sessionId)
+    override suspend fun stopSession(sessionId: String): Int {
+        return sessionDao.stopSession(sessionId)
     }
 
     override suspend fun logEvent(sessionId: String, name: String, properties: Map<String, Any>) {

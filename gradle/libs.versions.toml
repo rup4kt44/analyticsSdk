@@ -17,6 +17,10 @@ gson_version= "2.11.0"
 #ksp
 ksp = "2.1.0-1.0.29"
 room_version = "2.6.1"
+#mockito
+mockito = "5.4.0"
+jupiter = "5.7.2"
+kotlinx-coroutine-test = "1.7.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -48,6 +52,9 @@ room  = {group = "androidx.room" , name = "room-runtime" , version.ref = "room_v
 room-compiler = { group = "androidx.room", name = "room-compiler",version.ref = "room_version" }
 room-ktx = { group = "androidx.room", name = "room-ktx",version.ref = "room_version" }
 
+#Uni Testing
+mockito-core = {module = "org.mockito:mockito-core",version.ref = "mockito"}
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -55,4 +62,5 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 android-library = { id = "com.android.library", version.ref = "agp" }
 hilt_plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt_version" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
 
