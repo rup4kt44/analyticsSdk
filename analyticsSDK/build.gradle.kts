@@ -49,17 +49,17 @@ publishing {
                 artifactId = "analyticsSDK"
             }
         }
-        repositories {
-            maven {
-                name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/rup4kt44/analyticsSdk") // Github Package
-                credentials {
-                    //Fetch these details from the properties file or from Environment variables
-                    username = githubProperties["gpr.usr"] as String
-                    password = githubProperties["gpr.key"] as String
-                }
-            }
-        }
+//        repositories {
+//            maven {
+//                name = "GitHubPackages"
+//                url = uri("https://maven.pkg.github.com/rup4kt44/analyticsSdk") // Github Package
+//                credentials {
+//                    //Fetch these details from the properties file or from Environment variables
+//                    username = githubProperties["gpr.usr"] as String
+//                    password = githubProperties["gpr.key"] as String
+//                }
+//            }
+//        }
     }
 }
 
