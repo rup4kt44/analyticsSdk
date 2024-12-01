@@ -46,7 +46,7 @@ publishing {
             run {
                 groupId = "com.github.rupak"
                 version = "1.0"
-                artifact("$buildDir/outputs/aar/analyticssdk-debug.aar")
+                artifactId = "analyticsSDK"
             }
         }
         repositories {
