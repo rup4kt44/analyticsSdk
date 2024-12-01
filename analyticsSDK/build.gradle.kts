@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.hilt.plugin)
     alias(libs.plugins.ksp)
     id("kotlin-kapt")
-    id("maven-publish")
 }
 val githubProperties = Properties()
 githubProperties.load(rootProject.file("github.properties").inputStream())
@@ -39,28 +38,6 @@ android {
         jvmTarget = "11"
     }
 
-}
-publishing {
-    publications {
-        create<MavenPublication>("gpr") {
-            run {
-                groupId = "com.github.rupak"
-                version = "1.0"
-                artifactId = "analyticsSDK"
-            }
-        }
-//        repositories {
-//            maven {
-//                name = "GitHubPackages"
-//                url = uri("https://maven.pkg.github.com/rup4kt44/analyticsSdk") // Github Package
-//                credentials {
-//                    //Fetch these details from the properties file or from Environment variables
-//                    username = githubProperties["gpr.usr"] as String
-//                    password = githubProperties["gpr.key"] as String
-//                }
-//            }
-//        }
-    }
 }
 
 dependencies {
